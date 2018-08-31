@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand my-navbar-brand" href="#">Gallery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contribute</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+
+    </span>
+    </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="left">
+
+        <div class="box box-primary">
+            <div id="group1header" class="box-header with-border">
+                <h5>Some random pics !</h5>
+            </div>
+            <div id="group1" class="row box-body with-border">
+                <div class="col-sm-6">
+                    <img class="responsive-img" src="pics/photo1.png">
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo2.png">
+                            <br>
+                            <img class="responsive-img" src="pics/photo3.jpg">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo4.jpg">
+                            <br>
+                            <img class="responsive-img" src="pics/photo1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-header">
+                <h5>Some of my pics !</h5>
+            </div>
+            <div class="row box-body with-border">
+                <div class="col-sm-6">
+                    <img class="responsive-img" src="pics/Photo9.jpg">
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo5.jpg">
+                            <br>
+                            <img class="responsive-img" src="pics/photo6.JPG">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo7.jpg">
+                            <br>
+                            <img class="responsive-img" src="pics/photo8.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-header">
+                <h5>i hope you like these pics</h5>
+            </div>
+            <div class="row box-body with-border">
+                <div class="col-sm-6">
+                    <img class="responsive-img" src="pics/photo1.png">
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo2.png">
+                            <br>
+                            <img class="responsive-img" src="pics/photo3.jpg">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="responsive-img" src="pics/photo4.jpg">
+                            <br>
+                            <img class="responsive-img" src="pics/photo1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="right">
+        <div class="box box-primary force-overflow">
+            <div class="box-header with-border title">
+                <h5>Picture's title</h5>
+            </div>
+            <div class="box-body">
+                <img id="big-img" class="main-img" src="pics/photo1.png">
+            </div>
+            <div class="box-footer with-border">
+                Picture's description
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $('.responsive-img').hover(function () {
+            $(this).addClass('hover-pic');
+        },
+        function () {
+            $(this).removeClass('hover-pic');
+        }).click(function () {
+            //$('#big-img').fadeOut('slow').attr('src', $(this).attr('src')).fadeIn('slow');
+            var src = $(this).attr('src');
+            $('#big-img').fadeTo('slow',0,'swing',function () {
+                $(this).attr('src',src).fadeTo('slow',1,'swing');;
+            });
+
+
+    });
+</script>
+</body>
+</html>
